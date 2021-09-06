@@ -86,7 +86,7 @@ writePidFile (char *filename)
   int fd = open (filename, O_TRUNC | O_CREAT | O_WRONLY,S_IRUSR|S_IWUSR);
   char buf[6];
 
-  snprintf (buf, 6, "%i", pid);
+  snprintf (buf, 8, "%i", pid);
   if (fd >= 0)
   {
     /* write pid into */
